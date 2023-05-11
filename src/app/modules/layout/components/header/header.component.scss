@@ -1,0 +1,21 @@
+.main {
+    padding: 1rem;
+    background: #caf5ff;
+}
+
+.navigate {
+    p:first-child {
+        border-right: 2px solid black;
+    }
+    p {
+        cursor: pointer;
+        padding: 0 2rem;
+    }
+}
+
+.user {
+    .logout {
+        color: rgb(208, 0, 0);
+        cursor: pointer;
+    }
+}

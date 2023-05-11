@@ -1,0 +1,11 @@
+<h2>Login</h2>
+
+<form [formGroup]="emailForm" (ngSubmit)="onLogin()" class="form">
+  <input type="email" formControlName="email" />
+  <div *ngIf="emailForm.get('email')?.invalid && (emailForm.get('email')?.dirty || emailForm.get('email')?.touched)" class="mt-2">
+    <div class="text-center err-text" *ngIf="emailForm.get('email')?.errors?.['required']">Email is required.</div>
+    <div class="text-center err-text" *ngIf="emailForm.get('email')?.errors?.['pattern'] && submitted">Invalid email format.</div>
+  </div>
+  <div class="text-center err-text mt-2" *ngIf="errorMsg && submitted">{{errorMsg}}</div> 
+  <button type="submit" class="btn btn-dark mt-2">Login</button>
+</form>

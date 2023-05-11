@@ -1,0 +1,17 @@
+<section class="d-flex justify-content-between main">
+    <h2>My todo App</h2>
+    <div class="d-flex navigate">
+        <p [routerLink]="['todo']">
+            Home
+        </p>
+        <p [routerLink]="['about']">
+            About
+        </p>
+    </div>
+    <div class="user d-flex">
+        <p class="me-3"> Hello, <b>{{userInfo?.name}}</b></p>
+        <p class="logout" (click)="logout()">
+            Logout
+        </p>
+    </div>
+</section>
